@@ -115,7 +115,6 @@ function CartList() {
                                             <Button
                                                 variant="contained"
                                                 color="default"
-                                                size="large"
                                                 onClick={() => handleRemoveCartProduct(product)}
                                             >
                                                 Remove

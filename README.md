@@ -1,4 +1,40 @@
-# Getting Started with Create React App
+# E Shopping App Task
+    
+## Functionalities
+
+    1. Product List show with all the given details
+    2. You can view details in a big page of a product
+    3. Add / Remove Product from Cart 
+    4. Increase and Decrease the quantity of selected product
+    5. Total price with Unit price 
+
+## Features
+
+    1. LocalStorage with Localforage
+    2. React Routing
+    3. Simple UI with Material-UI
+    4. Fully Responsive
+    5. Fetching Data asynchronously
+
+## Technologies
+
+    1. React 
+    2. React-Readux
+    3. React-Router-Dom
+    4. Material UI
+    5. LocalForage
+    6. Redux-Logger
+    7. Redux-thunk for async api
+    8. Axios fro fetching Data
+
+
+
+
+
+
+#
+#
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,32 +75,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
