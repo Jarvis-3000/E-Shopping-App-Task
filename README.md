@@ -1,4 +1,4 @@
-# E Shopping App Task
+# E Shopping App Task 
     
 ## Functionalities
 
