@@ -21,21 +21,23 @@ function App(){
 
   useEffect(()=>{
     dispatch(cartActions.fetchProducts())
-    localStore.getItem("state")
-    .then(state=>{
+    const state = JSON.parse(localStorage.getItem("state"))
+    // .then(state=>{
       if(state){
         dispatch(cartActions.getPersistedState(state))
-        console.log(state)
+        console.log({...state})
       }
       else{
-        console.log(alert("no local data"))
+        alert("no local data")
+        // dispatch(cartActions.getPersistedState({productList:[],cartList:[],prodtct:{},fetchState:''}))
       }
-    })
+    // })
   },[])
 
   //save the state in localStorage
   useEffect( ()=>{
-    localStore.setItem("state", state)
+    console.log("state stored in localStorage")
+    localStorage.setItem("state", JSON.stringify(state))
   },[state])
 
   return (
