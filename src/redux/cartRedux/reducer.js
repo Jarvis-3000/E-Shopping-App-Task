@@ -13,18 +13,6 @@ export default function cartReducer(state = INITIAL_STATE, action) {
 
     switch (action.type) {
 
-        case actionTypes.GET_PERSISTED_STATE:
-            {
-                const { productList, cartList, product, fetchState } = action.payload
-                return {
-                    ...state,
-                    productList,
-                    cartList,
-                    product,
-                    fetchState
-                }
-            }
-
         case actionTypes.FETCH_PRODUCTS_REQUEST:
             return {
                 ...state,
@@ -34,7 +22,8 @@ export default function cartReducer(state = INITIAL_STATE, action) {
         case actionTypes.FETCH_PRODUCTS_SUCCESS:
             return {
                 ...state,
-                productList: action.payload
+                productList: action.payload,
+                fetchState: 'success'
             }
 
         case actionTypes.FETCH_PRODUCTS_FAILED:

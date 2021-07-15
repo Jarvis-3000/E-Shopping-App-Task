@@ -17,28 +17,17 @@ const localStore = localforage.createInstance({});
 function App(){
 
   const dispatch = useDispatch()
-  const state = useSelector(state=>state.cart)
-
+  const cartState = useSelector(state=>state.cart)
+// 
   useEffect(()=>{
     dispatch(cartActions.fetchProducts())
-    const state = JSON.parse(localStorage.getItem("state"))
-    // .then(state=>{
-      if(state){
-        dispatch(cartActions.getPersistedState(state))
-        console.log({...state})
-      }
-      else{
-        alert("no local data")
-        // dispatch(cartActions.getPersistedState({productList:[],cartList:[],prodtct:{},fetchState:''}))
-      }
-    // })
   },[])
 
   //save the state in localStorage
-  useEffect( ()=>{
-    console.log("state stored in localStorage")
-    localStorage.setItem("state", JSON.stringify(state))
-  },[state])
+  // useEffect( ()=>{
+  //   console.log("state stored in localStorage")
+  //   localStorage.setItem("cartState", JSON.stringify(cartState))
+  // },[cartState])
 
   return (
     <div style={{ overflow: 'hidden', padding:'0px', margin:'0px'}}>

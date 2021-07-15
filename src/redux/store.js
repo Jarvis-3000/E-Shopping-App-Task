@@ -1,17 +1,32 @@
-import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk"
-import logger from "redux-logger"
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import logger from 'redux-logger'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import rootReducer from './rootReducer'
 
-import rootReducer from "./rootReducer"
+const middlewares = []
 
-const middlewares=[]
-
-if(process.env.NODE_ENV==='development'){
-    middlewares.push(logger)
+if (process.env.NODE_ENV === 'development') {
+	middlewares.push(logger)
 }
 
-console.log("I am in store")
+let cartState = JSON.parse(localStorage.getItem('cartState'))
+? JSON.parse(localStorage.getItem('cartState'))
+	: {
+			productList: [],
+			cartList: [],
+			product: {},
+			fetchState: '',
+	  }
 
-export const store=createStore(rootReducer,applyMiddleware(thunk, ...middlewares))
+const initialState = {
+	cart: cartState,
+}
+
+export const store = createStore(
+	rootReducer,
+	initialState,
+	composeWithDevTools(applyMiddleware(thunk, ...middlewares))
+)
 
 export default store

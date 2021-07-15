@@ -15,14 +15,19 @@ const useStyles=makeStyles({
 
 
 
-function ProductList(){
+function ProductList({firstCardNumber, lastCardNumber}){
     const classes=useStyles()
     const {productList} = useSelector(state=>state.cart)
+    // console.log(productList.length)
+
+    console.log(firstCardNumber,lastCardNumber)
+
+    const productsPerPage = productList.slice(firstCardNumber,lastCardNumber)
 
     return(
         <Grid container spacing={3} className={classes.root} justify="flex-start" alignItems="flex-start">
             {
-                productList.map(product=>{
+                productsPerPage.map(product=>{
                     return (
                         <Grid item key={product.id} xs={12} sm={6} md={4} lg={3} xl={2}>
                             <ProductCard product={product} btnShow={true}/>
